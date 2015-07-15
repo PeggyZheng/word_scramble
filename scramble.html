@@ -26,6 +26,7 @@
            
             // prompt the user to guess the original word when given the scrambled word
             var guess = prompt("Hey, the scrambled word is " + scrambledWord + ". Guess the origal word based on the scrambled word!!");
+            guess = guess.toLowerCase().trim()
 
             // If the user guesses wrong, tell them they were wrong and the right word.
             if (guess !== randomWord) {
