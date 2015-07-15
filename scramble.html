@@ -12,7 +12,20 @@
 
         var playing = true;
 
+        function scrambleWord(word) {
+            var newWord = "";
+            for (var i = word.length - 1; i > 0; i--) {
+                var j = Math.floor((Math.random() * word.length));
+                var tmp = word.charAt(j);
+                newWord += tmp;
+                word = word.substring(0, j) + word.substring(j+1);
 
+            return newWord;
+
+            }
+             
+        var test = scrambledWord("apple");
+        console.log(test);
 
         while (playing) {
 
